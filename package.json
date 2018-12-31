@@ -1,0 +1,20 @@
+{
+  "name": "todo-list",
+  "version": "1.0",
+  "description": "a simple todo-list",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Calli Brucke",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.1"
+  }
+}

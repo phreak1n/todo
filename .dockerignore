@@ -1,0 +1,6 @@
+.git
+README.md
+node_modules
+docker-compose.yml
+dockerfile
+now.json
