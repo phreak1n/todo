@@ -1,7 +1,17 @@
 ToDo-List
 =========
 
-A ToDo-list app created to learn nodejs.
+A ToDo-list app created to learn nodejs, docker and git.
+
+Data will be stored in a `mongodb` in the docker-compose environment and `will be destroyed if the container is destroyed`.
+Under `"Connect to Database"` are alternative methods to store the mongodb.
+
+TODO:
+-----
+- Make a nice design (learn css)
+- Change Logo
+- make mongodb persitant
+- add a confirm-request for deleting
 
 Prepare
 -------
@@ -16,12 +26,13 @@ run:
 
 Connect to database
 -------------------
+Change in controllers/todocontrollers.js the line under `//Connect to database` to change he method used to connect to a mongodb
 ```
 //Connect to database local docker+mongodb
 mongoose.connect('mongodb://127.0.0.1:27017/todo', {useNewUrlParser: true});
 
 //Connect to database on mlab
-mongoose.connect('mongodb://todo:todo_secret1@XXXXXXX.mlab.com:XXXXX/todo-list', {useNewUrlParser: true});
+mongoose.connect('mongodb://<<USER>>:<<PASSWORD>>@XXXXXXX.mlab.com:<<PORT>>/todo-list', {useNewUrlParser: true});
 
 //Connect in Docker-Compose
 mongoose.connect('mongodb://mongo:27017/todo', {useNewUrlParser: true}
