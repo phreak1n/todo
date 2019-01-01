@@ -37,6 +37,9 @@ mongoose.connect('mongodb://<<USER>>:<<PASSWORD>>@XXXXXXX.mlab.com:<<PORT>>/todo
 
 //Connect in Docker-Compose
 mongoose.connect('mongodb://mongo:27017/todo', {useNewUrlParser: true}
+
+//Connect in Dockerfile with intern mongodb
+mongoose.connect('mongodb://127.0.0.1:27017/todo', {useNewUrlParser: true}
 ```
 
 Based on this Tutorial:

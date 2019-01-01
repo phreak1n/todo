@@ -1,8 +1,6 @@
 {
   "name": "todo-list",
   "version": 2,
-  "builds": [
-    {"src": "app.js", "use": "@now/node"},
-    {"src": "controllers/todoController.js", "use": "@now/node"}
-  ]
+  "type": "dockerfile"
 }
+

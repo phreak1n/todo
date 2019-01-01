@@ -3,5 +3,3 @@ node_modules
 #Visual Studio
 .vscode
 
-#now.sh serverless service
-now.json

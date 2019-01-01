@@ -3,7 +3,13 @@ const mongoose = require('mongoose');
 
 
 //Connect to database
-mongoose.connect('mongodb://mongo:27017/todo', {useNewUrlParser: true}, function(err) {
+//docker-compose with extra mongodb
+//mongoose.connect('mongodb://mongo:27017/todo', {useNewUrlParser: true}, function(err) {
+//  if (err) {process.exit(1);};
+//  console.log('Connected to database');
+//});
+//dockerfile with integrated mongodb
+mongoose.connect('mongodb://127.0.0.1:27017/todo', {useNewUrlParser: true}, function(err) {
   if (err) {process.exit(1);};
   console.log('Connected to database');
 });

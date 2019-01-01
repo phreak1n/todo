@@ -1,0 +1,15 @@
+FROM mongo
+RUN apt update && apt -y install \
+    curl \
+    git
+
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash - \
+    && apt-get install -y nodejs
+
+
+WORKDIR /srv/app
+RUN git clone https://github.com/phreak1n/todo.git ./
+RUN chmod +x run_now.sh
+RUN npm install
+EXPOSE 8080
+CMD [ "./run_now.sh", "" ]
