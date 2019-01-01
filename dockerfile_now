@@ -11,6 +11,7 @@ WORKDIR /srv/app
 RUN git clone https://github.com/phreak1n/todo.git ./
 RUN chmod +x ./run_now.sh
 RUN npm install -g yarn
+RUN rm package-lock.json
 RUN yarn
-EXPOSE 8080
+EXPOSE 80
 CMD [ "./run_now.sh" ]

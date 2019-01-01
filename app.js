@@ -17,5 +17,5 @@ todoController(app);
 
 
 //listen to port
-app.listen(8080);
+app.listen(80);
 console.log('server startet on port 8080');
