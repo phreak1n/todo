@@ -13,7 +13,7 @@ app.use('/assets', express.static('./assets'));
 
 
 //fire controllers 
-  todoController(app);
+todoController(app);
 
 
 //listen to port
