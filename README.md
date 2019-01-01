@@ -42,5 +42,11 @@ mongoose.connect('mongodb://mongo:27017/todo', {useNewUrlParser: true}
 mongoose.connect('mongodb://127.0.0.1:27017/todo', {useNewUrlParser: true}
 ```
 
+## Build singel docker
+
+```
+//use "Connect in Dockerfile with intern mongodb"
+docker build -t phreak1n/todo-list:now -f .\dockerfile_now .
+```
 Based on this Tutorial:
 <https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp>
