@@ -16,9 +16,10 @@
       <input type="text" name="item" placeholder="Add new item..." required>
       <button type="submit">Add Item</button>
     </form>
+     <!--between the <li>-tags and the <%>-tags cannot be any space or the deletefunktion wont work!!! -->
     <ul>
       <% for(var i=0; i < todos.length; i++){ %>
-      <li><%= todos[i].item %></li> <!--between the <li>-tags and the <%>-tags cannot be any space or the deletefunktion wont work!!! -->
+      <li><%= todos[i].item %></li>
       <% }; %>
     </ul>
   </div>
