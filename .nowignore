@@ -1,9 +1,10 @@
-.git
+.vscode
+node_modules
+.dockerignore
 .gitignore
-README.md
 docker-compose.yml
 dockerfile
 dockerfile_now
-now.json
-.vscode
 package-lock.json
+README.md
+run_now.sh
