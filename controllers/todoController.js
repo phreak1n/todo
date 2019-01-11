@@ -2,24 +2,26 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 
-//Connect to database
-//docker-compose with extra mongodb
-//mongoose.connect('mongodb://mongo:27017/todo', {useNewUrlParser: true}, function(err) {
-//  if (err) {process.exit(1);};
-//  console.log('Connected to database');
-//});
-//dockerfile with integrated mongodb
-mongoose.connect('mongodb://127.0.0.1:27017/todo', {useNewUrlParser: true}, function(err) {
+// Connect to database
+// docker-compose with extra mongodb
+mongoose.connect('mongodb://mongo:27017/todo', {useNewUrlParser: true}, function(err) {
   if (err) {process.exit(1);};
   console.log('Connected to database');
 });
+// dockerfile with integrated mongodb
+/*
+mongoose.connect('mongodb://127.0.0.1:27017/todo', {useNewUrlParser: true}, function(err) {
+  if (err) {process.exit(1);};
+ console.log('Connected to database');
+/});
+*/
 
-//Create a schema
+// Create a schema
 var todoSchema = new mongoose.Schema({
   item: String
 });
 
-//Create Model
+// Create Model
 var Todo = mongoose.model('Todo', todoSchema);
 
 
@@ -32,7 +34,7 @@ module.exports = function (app) {
     console.log('GET /todo');
     console.log(req.url);
 
-    //get data from mongodb and pass it to view
+    // get data from mongodb and pass it to view
     Todo.find({}, function(err,data) {
       if (err) throw err;
       res.render('todo', {todos: data});
@@ -44,7 +46,7 @@ module.exports = function (app) {
     console.log('POST /todo');
     console.log(req.body);
 
-    //get data from view and add it to monogodb
+    // get data from view and add it to monogodb
     var newTodo = Todo(req.body).save(function(err,data) {
       if (err) throw err;
       res.json(data);
@@ -57,7 +59,7 @@ module.exports = function (app) {
     console.log('DELETE /todo');
     console.log(req.params.item.replace(/\-/g, " "));
 
-    //delete requestet item from mongodb
+    // delete requestet item from mongodb
     Todo.find({item: req.params.item.replace(/\-/g, " ")}).remove(function(err,data) {
       if (err) throw err;
       res.json(data);

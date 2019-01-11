@@ -12,8 +12,9 @@ Under `"Connect to Database"` are alternative methods to store the mongodb.
 * make mongodb persitant
 * add a confirm-request for deleting
 * get now.json working
+* redirect "/" to "/todo"
 
-## Prepare
+## Setuo
 
 ```bash
 prepare:
