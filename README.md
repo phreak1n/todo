@@ -8,7 +8,7 @@ Under `"Connect to Database"` are alternative methods to store the mongodb.
 ## TODO
 
 * Make a nice design (learn css)
-* Change Logo
+* ✔️Change Logo
 * make mongodb persitant
 * add a confirm-request for deleting
 * get now.json working
